@@ -1,5 +1,9 @@
 <?php
+$nombre_de_lignes = 1;
 
-echo 'Hello World';
-
+while ($nombre_de_lignes <= 200)
+{
+    echo $nombre_de_lignes . PHP_EOL;
+    $nombre_de_lignes++; 
+}
 ?>
