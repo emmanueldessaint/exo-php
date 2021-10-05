@@ -1,43 +1,26 @@
 <?php
 
-// var_dump($argv);
+var_dump($argv);
+$numberInArray = (count($argv));
+var_dump($numberInArray);
 
-// $numberInArray = (count($argv));
+$items = array ();
 
-// var_dump($numberInArray);
+for ($i=1; $i < $numberInArray; $i++) {
+    
+    array_push($items,$argv[$i]);
+    // var_dump($argv[$i]);
+}
 
-// $items = Array ();
+var_dump($items);
+sort($items);
+var_dump($items);
 
-// for ($i=0; $i < $numberInArray; $i++) {
-//     "0" => Array (
-//         "id" => "01",
-//         "name" => "BMW",
-//     ),
-//     // json_encode($argv[$i]);
-// }
+$json = json_encode($items);
+$bytes = file_put_contents("contenu.json", $json); 
 
-$array = Array (
-    "0" => Array (
-        "id" => "01",
-        "name" => "Olivia Mason",
-        "designation" => "System Architect"
-    ),
-    "1" => Array (
-        "id" => "02",
-        "name" => "Jennifer Laurence",
-        "designation" => "Senior Programmer"
-    ),
-    "2" => Array (
-        "id" => "03",
-        "name" => "Medona Oliver",
-        "designation" => "Office Manager"
-    )
-);
 
-// encode array to json
-$json = json_encode($array);
-$bytes = file_put_contents("myfile.json", $json); 
-echo "The number of bytes written are $bytes.";
+
 
 
 
