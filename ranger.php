@@ -9,7 +9,6 @@ $items = array ();
 for ($i=1; $i < $numberInArray; $i++) {
     
     array_push($items,$argv[$i]);
-    // var_dump($argv[$i]);
 }
 
 var_dump($items);
@@ -18,11 +17,5 @@ var_dump($items);
 
 $json = json_encode($items);
 $bytes = file_put_contents("contenu.json", $json); 
-
-
-
-
-
-
 
 ?>
