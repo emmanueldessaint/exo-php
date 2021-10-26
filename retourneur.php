@@ -1,6 +1,5 @@
 <?php
 // var_dump($argv);
-
 $numberInArray = (count($argv));
 
 $items = array ();

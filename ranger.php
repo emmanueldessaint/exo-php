@@ -16,6 +16,12 @@ sort($items);
 var_dump($items);
 
 $json = json_encode($items);
-$bytes = file_put_contents("contenu.json", $json); 
+$create = file_put_contents("contenu.json", $json); 
+
+// $json2 = json_decode($items);
+// var_dump($json2);
+// $json2 = (json_decode($json));
+// rsort($json2);
+// var_dump($json2);
 
 ?>

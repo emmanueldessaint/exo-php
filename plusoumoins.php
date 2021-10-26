@@ -14,6 +14,8 @@ var_dump($myNumber);
 for ($i=0; $i < $vies; $i++) {
     $line = readline("Commande : ");
     readline_add_history($line);
+
+    echo($line);
     
     if ($line < $myNumber) {
         echo "Le chiffre est plus grand" . PHP_EOL;
